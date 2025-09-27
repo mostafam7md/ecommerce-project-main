@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeAttire</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="logo"><img src="img/Logo.png" alt="" /></div>
+        <input
+          id="productSearch"
+          type="text"
+          name="search"
+          placeholder="Search products"
+        />
+
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="favorite.html">Favorite</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Make every day an elegant adventure with the latest fashion.</h1>
+        <p>
+          Discover premium fashion pieces that elevate your style. From casual
+          wear to formal attire, find your perfect look with our curated
+          collection.
+        </p>
+        <a href="#shop" class="cta-btn">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Brand Logos -->
+    <section class="brand-section">
+      <div class="brand-container">
+        <div class="brand-logo">VERSACE</div>
+        <div class="brand-logo">ZARA</div>
+        <div class="brand-logo">GUCCI</div>
+        <div class="brand-logo">PRADA</div>
+        <div class="brand-logo">Calvin Klein</div>
+      </div>
+    </section>
+    <!-- Product Section -->
+    <section id="shop" class="product-section">
+      <div class="product-controls">
+        <select
+          id="categoryFilter"
+          onfocus="this.size=3;"
+          onblur="this.size=0;"
+          onchange="this.size=1; this.blur();"
+        >
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+      <div id="productsList" class="products-list"></div>
+    </section>
+
+    <!-- Beach Section -->
+    <section class="beach-section">
+      <div class="section-container">
+        <div class="beach-content">
+          <h2>Wear To Beach</h2>
+          <p>
+            Get ready for summer with our exclusive beachwear collection. From
+            stylish swimwear to comfortable cover-ups, make every beach day
+            memorable.
+          </p>
+          <a href="#beach" class="cta-btn">Explore Collection</a>
+        </div>
+      </div>
+    </section>
+    <script src="script.js" defer></script>
+  </body>
+</html>

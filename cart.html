@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Ecommerce Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo"><img src="img/Logo.png" alt="" /></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="favorite.html">Favorite</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="cart-section">
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+          <span id="cart-total-label">Total:</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <div
+          id="checkout-btn-container"
+          style="text-align: right; margin-top: 1.5rem"
+        >
+          <a
+            href="checkout.html"
+            id="checkout-btn"
+            class="cta-btn"
+            style="display: none"
+            >Checkout</a
+          >
+        </div>
+      </section>
+    </main>
+    <script src="cart.js"></script>
+    <script>
+      // Show checkout button only if cart is not empty
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateCheckoutBtn() {
+          const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+          const btn = document.getElementById("checkout-btn");
+          if (cart.length > 0) {
+            btn.style.display = "inline-block";
+          } else {
+            btn.style.display = "none";
+          }
+        }
+        updateCheckoutBtn();
+        window.addEventListener("storage", updateCheckoutBtn);
+      });
+    </script>
+  </body>
+</html>
