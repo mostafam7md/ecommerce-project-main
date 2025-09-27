@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let categories = [];
 
   // Fetch products from DummyJSON
-  fetch("https://dummyjson.com/products?limit=20")
+  fetch("https://dummyjson.com/products?limit=20&skip=82")
     .then((res) => res.json())
     .then((data) => {
       allProducts = data.products;
